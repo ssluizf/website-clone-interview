@@ -20,6 +20,10 @@ export const Container = styled.nav`
         width: 40px;
         padding: 0px 10px;
         fill: #15B7DE;
+        
+        @media (max-width: 720px) {
+            display: none;
+        }
     }
 `
 
@@ -51,6 +55,10 @@ export const SearchBox = styled.form`
     svg {
         fill: gray;
     }
+
+    @media (max-width: 720px) {
+        display: none;
+    }
 `
 
 export const IconLabeledButton = styled.button`
@@ -64,5 +72,9 @@ export const IconLabeledButton = styled.button`
         width: 40px;
         padding: 0px 10px;
         fill: white;
+    }
+
+    @media (max-width: 992px) {
+        display: none;
     }
 `
