@@ -1,22 +1,30 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
-import { Container, SearchBox, IconTittle } from '../../styles/components/Navbar';
-// import logo from '../../assets/img/logo.png'
-// import User from '../../assets/svg/user-circle.svg'
-// import Menu from '../../assets/svg/menu.svg'
-// import Basket from '../../assets/svg/basket.svg'
+import { Container, SearchBox, IconLabeledButton } from '../../styles/components/Navbar';
+import logo from '../../assets/img/logo.png'
+import { ReactComponent as User } from '../../assets/svg/user-circle.svg'
+import { ReactComponent as Menu } from '../../assets/svg/menu.svg'
+import { ReactComponent as Basket } from '../../assets/svg/basket.svg'
+import { ReactComponent as Search } from '../../assets/svg/search.svg'
 
 function Navbar() {
   return (
     <Container>
-      {/* <img src={logo} alt="Logo" /> */}
-      <IconTittle>
+      <img src={logo} alt="Logo" />
+      <IconLabeledButton>
+        <Menu />
         <p>CATEGORIAS</p>
-      </IconTittle>
-      <SearchBox placeholder="O que você procura?" />
-      <IconTittle>
+      </IconLabeledButton>
+      <SearchBox>
+        <input type="text" placeholder="O que você procura?" />
+        <button type="submit"><Search /></button>
+      </SearchBox>
+      <IconLabeledButton>
+        <User />
         <p>ENTRAR</p>
-      </IconTittle>
+      </IconLabeledButton>
+      <Link to="/shopping"><Basket /></Link>
     </Container>
   );
 }

@@ -28,6 +28,17 @@ export const HeaderContainer = styled.section`
     p {
         line-height: 1.5;
     }
+
+    svg {
+        height: 4rem;
+        width: 4rem;
+        fill: #EEB2AA;
+    }
+
+    @media (max-width: 992px) {
+        grid-column: span 2;
+        height: 40vh;
+    }
 `
 
 export const Image = styled.img`
@@ -35,4 +46,36 @@ export const Image = styled.img`
     height: 100%;
     width: 100%;
     object-fit: none;
+
+    @media (max-width: 992px) {
+        display: none;
+    }
+`
+
+export const Actions = styled.section`
+    display: flex;
+    grid-column: 2;
+    padding: 10px 0 0 50px;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        padding: 0 20px;
+        margin: 4px;
+        width: 12rem;
+        height: 2.5rem;
+
+        svg {
+            height: 1rem;
+            width: 1rem;
+            fill: rgba(0, 0, 0, 0.6);
+        }
+
+        p {
+            color: rgba(0, 0, 0, 0.6);
+            padding-left: 0.6rem;
+        }
+    }
 `

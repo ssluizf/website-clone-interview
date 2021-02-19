@@ -7,6 +7,10 @@ import { Container, Card, CardImage, Band, Line } from '../../styles/components/
 function Content() {
   return (
     <Container>
+      <header>
+        <h2>SHAMPOOS E DERMOCOSMÉTICOS</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, error sit voluptas quos consequuntur facilis praesentium quidem eveniet quam aperiam accusantium unde odit. Excepturi architecto consequuntur ut perferendis rem quaerat.</p>
+      </header>
       <Card>
         <h3>COMO ESCOLHER O MELHOR SHAMPOO?</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique harum numquam voluptate. Quis, minus dolore cumque unde eveniet quisquam accusamus reiciendis architecto laboriosam fuga officia animi saepe ut sed totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum, cupiditate tempora voluptate veritatis repudiandae maxime doloribus beatae excepturi consequatur quos nisi debitis autem nesciunt ullam tempore sapiente et. Soluta. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae adipisci natus id, atque necessitatibus, amet vero facilis voluptate quia ab ratione eos illo minus tempore asperiores quod qui nam quidem?</p>

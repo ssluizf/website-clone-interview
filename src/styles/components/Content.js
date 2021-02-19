@@ -9,9 +9,26 @@ export const Container = styled.main`
     margin: auto;
     padding-top: 60px;
 
-    h3 {
+    & > header {
+        grid-column: span 2;
+        margin: 0 8px; 
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    h2, h3 {
+        font-size: 1.1rem;
         color: ${props => props.theme.colors.secondary};
         font-weight: 500;
+        line-height: 3;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    @media(max-width: 1200px) {
+        width: 80vw;
     }
 `
 
@@ -20,17 +37,15 @@ export const Card = styled.article`
     background-color: #FFFFFF;
     box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2);
 
-    h3 {
-        line-height: 3;
-    }
-
     p {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        color: rgba(0, 0, 0, 0.5);
+        color: rgba(0, 0, 0, 0.6);
     }
 
     &:last-of-type {
+        grid-column: span 2;
+    }
+
+    @media(max-width: 992px) {
         grid-column: span 2;
     }
 `
@@ -38,7 +53,6 @@ export const Card = styled.article`
 export const CardImage = styled.article`
     grid-row: span 2;
     background-color: #FFFFFF;
-    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 
     img {
@@ -51,10 +65,18 @@ export const CardImage = styled.article`
     header {
         padding: 16px;
     }
+
+    @media(max-width: 992px) {
+        grid-row: auto;
+        grid-column: span 2;
+
+        img {
+            display: none;
+        }
+    }
 `
 
 export const Band = styled.header`
-    grid-column: span 2;
     background-color: ${props => props.theme.colors.secondary};
     padding: 10px;
     text-align: ${props => props.alignCenter ? 'center' : 'start'};

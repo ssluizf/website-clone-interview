@@ -11,4 +11,11 @@ export default createGlobalStyle`
         background: #EEEEEE;
         font-family: 'Roboto', sans-serif;
     }
+
+    button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
 `
